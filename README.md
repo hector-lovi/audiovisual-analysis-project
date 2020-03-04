@@ -1,6 +1,6 @@
 # women advertising analysis
 La presencia de la mujer en la publicidad actual
----
+
 Objetivo del proyecto: 
 - Desarrollar una herramienta capaz de captar la presencia de mujeres en piezas publicitarias.  
 
@@ -17,10 +17,10 @@ Objetivo del proyecto:
 ---
 - Introducir en una base de datos toda la información extraida y analizada
 - Estructurar por: 
-  · Medio
-  · Marca
-  · Producto
-  · Contenido (fecha, texto, sentiment, URL...)  
+· Medio
+· Marca
+· Producto
+· Contenido (fecha, texto, sentiment, URL...)  
 ### Fase 4 - API con gráficos interactivos
 ---
 - Mostrar los resultados a través de gráficos interactivos
