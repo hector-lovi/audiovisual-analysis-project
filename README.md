@@ -1,8 +1,5 @@
 # women advertising analysis
-La presencia de la mujer en la publicidad actual
-
-Objetivo del proyecto: 
-- Desarrollar una herramienta capaz de captar la presencia de mujeres en piezas publicitarias.  
+Este proyecto se focaliza en el desarrollo de una herramienta capaz de captar la presencia de mujeres en piezas publicitarias con el objetivo analizar dicha publicidad y sustraer conclusiones sobre la dirección que está tomando la publicidad en nuestro país.
 
 ### Fase 1 - Análisis de clasificación
 ---
