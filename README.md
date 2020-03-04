@@ -1,1 +1,30 @@
-# women_advertising-analysis
+# women advertising analysis
+La presencia de la mujer en la publicidad actual
+---
+Objetivo del proyecto: 
+- Desarrollar una herramienta capaz de captar la presencia de mujeres en piezas publicitarias.  
+
+### Fase 1
+Análisis de clasificación
+---
+- Encontrar un Dataset con fotos tageadas de hombres y mujeres.
+- Encontrar un modelo de clasificación óptimo y entrenarlo.
+- Enfocado a formato video.  
+### Fase 2 (opcional)
+Pasar el audio a texto
+---
+- Analizar el texto con NLTK (?)
+- Reconocer si el audio pertenece a un hombre o a una mujer (?)  
+### Fase 3
+Base de Datos
+---
+- Introducir en una base de datos toda la información extraida y analizada
+- Estructurar por: 
+  · Medio
+  · Marca
+  · Producto
+  · Contenido (fecha, texto, sentiment, URL...)  
+### Fase 4
+API con gráficos interactivos
+---
+- Mostrar los resultados a través de gráficos interactivos
