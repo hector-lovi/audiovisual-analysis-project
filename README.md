@@ -16,6 +16,7 @@ Este proyecto se focaliza en el desarrollo de una herramienta capaz de captar la
 ---
 - Introducir en una base de datos toda la información extraida y analizada.
 - Estructurar por:  
+··· Spot
 ··· Medio  
 ··· Marca  
 ··· Producto  
