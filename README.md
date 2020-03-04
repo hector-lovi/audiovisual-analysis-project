@@ -1,5 +1,5 @@
 # women advertising analysis
-Este proyecto se focaliza en el desarrollo de una herramienta capaz de captar la presencia de mujeres en piezas publicitarias con el objetivo analizar dicha publicidad y sustraer conclusiones sobre la dirección que está tomando la publicidad en nuestro país.
+Este proyecto se focaliza en el desarrollo de una herramienta capaz de captar la presencia de mujeres en piezas publicitarias (solo en formato video) con el objetivo analizar dicha publicidad y sustraer conclusiones sobre la dirección que está tomando la publicidad en nuestro país.
 
 ### Fase 1 - Análisis de clasificación
 ---
@@ -13,11 +13,11 @@ Este proyecto se focaliza en el desarrollo de una herramienta capaz de captar la
 ### Fase 3 - Base de Datos
 ---
 - Introducir en una base de datos toda la información extraida y analizada
-- Estructurar por: 
-· Medio
-· Marca
-· Producto
-· Contenido (fecha, texto, sentiment, URL...)  
+- Estructurar por:  
+··· Medio  
+··· Marca  
+··· Producto  
+··· Contenido (fecha, texto, sentiment, URL...)  
 ### Fase 4 - API con gráficos interactivos
 ---
 - Mostrar los resultados a través de gráficos interactivos
