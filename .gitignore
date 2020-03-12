@@ -1,3 +1,11 @@
+# Carpetas
+input/men
+input/women
+
+# Otros
+output/model_sequential84.90231037139893.h5
+output/model_sequential84.90231037139893.json
+
 #.DS_Store
 .DS_Store
 

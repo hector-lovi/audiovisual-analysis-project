@@ -53,7 +53,7 @@ def videoAnalyze(video):
                 genre = model.predict(p)[0]
                 label = ['man', 'woman'][np.argmax(genre)]
 
-                if genre.max() > 0.77:
+                if genre.max() > 0.79:
                     cv2.rectangle(frameClone, (x, y),
                                   (x + w, y + h), (0, 255, 0), 1)
                     cv2.putText(frameClone, label, (x, y - 10),
