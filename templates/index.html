@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ad Analyze</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/AA.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Machine Learning App</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Ad Analyze</h1>
+            <p class="lead"></p>
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Ad Analyze es una app que ayuda a generar un análisis sintético sobre spots publicitarios.</h4>
+                <p>Dentro del sector publicitario es una práctica habitual hacer todo tipo de análisis
+                    publicitarios.<br />
+                    El objetivo es conocer el entorno que te rodea para poder avanzar en la dirección adecuada.<br />
+                    El análisis cuenta con un reconocimiento facial capaz de reconocer el género de la persona que
+                    reconoce y un análisis textual.<br />
+                </p>
+
+
+                <h5>INSERTE EL SPOT QUE DESEA ANALIZAR </h5>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file">Cargar Video</label>
+                    <input type="submit" name="submit" id="submit" class="inputfile" />
+                    <label for="submit">Hacer análisis</label>
+                </form>
+                <h6>*Ad Analyze se encuentra en estado de desarrollo. </h6>
+            </div>
+
+        </div>
+        <img src="./img/night-square.jpg">
+
+        <footer class="footer">
+            <p>&copy; Héc LoVi | 2020</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
