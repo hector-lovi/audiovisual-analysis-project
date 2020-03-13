@@ -9,7 +9,9 @@ from keras.preprocessing.image import img_to_array
 
 
 def videoAnalyze(video):
-
+    '''
+    Video-analisis con reconocimiento sobre el género.
+    '''
     with open('../output/model_sequential84.16370153427124.json', 'r') as f:
         model_json = json.load(f)
 
@@ -21,13 +23,13 @@ def videoAnalyze(video):
         '../haarcascade_frontalface_default.xml')
 
     cap = cv2.VideoCapture(video)
+    result = []
 
     while cap.isOpened():
         frame = cap.read()[1]
-        frame = imutils.resize(frame, width=400)
-        frameClone = frame.copy()
 
         try:
+            frame = imutils.resize(frame, width=400)
             color = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             face = face_cascade.detectMultiScale(
                 color,
@@ -35,25 +37,23 @@ def videoAnalyze(video):
                 minNeighbors=5
             )
 
+            frameClone = frame.copy()
+
             if len(face) > 0:
                 (x, y, w, h) = face[0]
                 roi = color[y:y+h, x:x+w]
                 roi = cv2.resize(roi, (60, 60))
                 roi = np.stack(roi)
-                # if K.image_data_format() == 'channels_first':
-                #    roi = roi.reshape(1, 60, 60, 1)
-                # else:
-                #    roi = roi.reshape(1, 60, 60, 1)
 
                 p = np.expand_dims(roi, axis=0).reshape(
                     np.expand_dims(roi, axis=0).shape[0], 60, 60, 1)
 
-                # predict(np.expand_dims(np_image,axis=0))[0]
-
                 genre = model.predict(p)[0]
                 label = ['man', 'woman'][np.argmax(genre)]
 
-                if genre.max() > 0.79:
+                result.append(label)
+
+                if genre.max() > 0.80:
                     cv2.rectangle(frameClone, (x, y),
                                   (x + w, y + h), (0, 255, 0), 1)
                     cv2.putText(frameClone, label, (x, y - 10),
@@ -62,7 +62,7 @@ def videoAnalyze(video):
             cv2.imshow('Advertising Analyze',
                        imutils.resize(frameClone, width=450))
 
-        except Exception as e:
+        except:
             cap.release()
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -72,5 +72,7 @@ def videoAnalyze(video):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+    m = result.count('man')
+    w = result.count('woman')
 
-videoAnalyze('../video_prueba2.mpg')
+    return print([float("{0:.2f}".format((m/(m+w))*100)), float("{0:.2f}".format((w/(m+w))*100))])

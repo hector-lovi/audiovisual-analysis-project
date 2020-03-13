@@ -4,6 +4,9 @@ import speech_recognition as sr
 
 
 def extractAudio(video):
+    '''
+    Transforma el archivo video a un archivo audio, devuelve el audio en formato texto.
+    '''
     vFile = moviepy.editor.VideoFileClip(video)
     aFile = vFile.audio
 
