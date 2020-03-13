@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ad Analyze</title>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Ad Analyze</h1>
+    <img src="./img/AA.png" class="logo" style="width: 200px; height: 200px;">
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>El objetivo de Ad Analyze es poder realizar un análisis sintético sobre spots publicitarios.</h4>
+                <p>Para poder tomarlas mejores decisiones sobre marcas o sectores es importante conocer la realidad
+                    <br />
+                    para así poder avanzar hacia la dirección adecuada. <br />
+                    <br />
+                    Esta app pretende suplir dicho análisis de manera automatizada:<br />
+                    - Puedes reconocer el género de las personas que aparecen en el spot.<br />
+                    - Análisis de contenido (textual).<br />
+                </p>
+
+
+                <h5>INSERTE EL SPOT QUE DESEA ANALIZAR </h5>
+                <form action="/analysis" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file">Cargar Video</label>
+                    <input type="submit" name="submit" id="submit" class="inputfile" />
+                    <label for="submit">Hacer análisis</label>
+                </form>
+                <h6>*Ad Analyze se encuentra en estado de desarrollo. </h6>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <p>&copy; hector-lovi | 2020</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
