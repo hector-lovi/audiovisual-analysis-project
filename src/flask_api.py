@@ -1,9 +1,9 @@
 import os
-from flask import Flask, flash, request, redirect
+from flask import Flask, request
 from flask import render_template
 import video_analyze as v
 import extract_text as e
-import text_analyze as t
+import text_analyze as te
 import extract_time as ti
 from werkzeug.utils import secure_filename
 
@@ -33,7 +33,7 @@ def spot_analysis():
             app.config['UPLOAD_FOLDER'], filename))
         text1 = e.extractAudio(os.path.join(
             app.config['UPLOAD_FOLDER'], filename))
-        text2 = t.textAnalyze(text1)
+        text2 = te.textAnalysis(text1)
 
         return render_template('analysis.html', video=video, time=time, text1=text1, text2=text2)
 

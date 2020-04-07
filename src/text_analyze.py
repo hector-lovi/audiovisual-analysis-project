@@ -1,14 +1,7 @@
-import spacy
 import nltk
-from nltk import *
 import es_core_news_sm
 from collections import Counter
-from nltk.corpus import wordnet
-from spacy.matcher import matcher
-from spacy.lang.es import Spanish
-from nltk.corpus import wordnet
-from spacy.matcher import matcher
-from spacy_wordnet.wordnet_annotator import WordnetAnnotator
+from spacy import spacy_wordnet, Spanish, matcher
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 
@@ -23,7 +16,7 @@ def textSentiment(txt):
 
 def textAnalysis(txt):
     '''
-    Realiza un nálisis textual.
+    Realiza un análisis textual.
     '''
     nlp = es_core_news_sm.load()
 
@@ -52,3 +45,5 @@ def textAnalysis(txt):
     print(nouns)
     print('\nADJETIVOS...')
     print(adjectives)
+
+    return 'Análisis OK'
